@@ -4,7 +4,7 @@
     required="{{requiredProperty}}" disabled="{{disabledProperty?disabledProperty:'false'}}" />
     <span class="label-name">
       <span class="content-name">
-        <span class="value">{{ngModel? ngModel.name? (ngModel.name | slice:0:16) : (ngModel | slice:0:16) : ("Aucun Fichier Sélectionné" | slice:0:16)}}</span>
+        <span class="value">{{ngModel? ngModel['name']? (ngModel['name'] | slice:0:16) : (ngModel | slice:0:16) : ("Aucun Fichier Sélectionné" | slice:0:16)}}</span>
         <label for="{{name}}"><fa-icon [icon]="faFolder"></fa-icon></label>
       </span>
     </span>

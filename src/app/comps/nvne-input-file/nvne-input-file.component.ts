@@ -29,6 +29,10 @@ export class NvneInputFileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public displayText(){
+    // return this.ngModel? this.ngModel.name? (this.ngModel.name | slice:0:16) : (this.ngModel | slice:0:16) : ("Aucun Fichier Sélectionné" | slice:0:16)
+  }
+
   public selectFile(event) {
     console.log(event.target);
     console.log("Setting kbis "+event);
