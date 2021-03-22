@@ -6,39 +6,39 @@ metadata:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nvne-front
+  name: nvne-espace-entreprise
   namespace: nvne
   labels:
-    app: nvne-front
+    app: nvne-espace-entreprise
 spec:
   ports:
   - protocol: TCP
     port: 8080
     targetPort: 80
   selector:
-    app: nvne-front
+    app: nvne-espace-entreprise
   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nvne-front
+  name: nvne-espace-entreprise
   namespace: nvne
   labels:
-    app: nvne-front
+    app: nvne-espace-entreprise
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nvne-front
+      app: nvne-espace-entreprise
   template:
     metadata:
       labels:
-        app: nvne-front
+        app: nvne-espace-entreprise
     spec:
       containers:
-      - name: nvne-front
-        image: gcr.io/stellar-spark-300508/nvne-front:0.0.25
+      - name: nvne-espace-entreprise
+        image: gcr.io/single-actor-306917/nvne-espace-entreprise:0.0.1
         ports:
         - name: http
           containerPort: 80
