@@ -11,6 +11,7 @@
 
 export const environment = {
   production: false,
+  clientId: 'service-espace-entreprise',
   authApiUrl: 'http://localhost:8080/auth',
   backendApiUrl: 'http://localhost:8082/api/espaceentreprise',
   adminUrl: 'http://localhost:8081',
