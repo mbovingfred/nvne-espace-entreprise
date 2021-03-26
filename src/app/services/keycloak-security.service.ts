@@ -22,8 +22,8 @@ export class KeycloakSecurityService {
   async init(){
     console.log("Security Information ... "+environment.authApiUrl);
     this.realm = "nvne-realm";
-    this.clientId = "nvne-espace-entreprise";
-    this.kcUrl = environment.authApiUrl+"/";
+    this.clientId = "service-espace-entreprise";
+    this.kcUrl = environment.authApiUrl+"/"; 
     this.kc= new Keycloak({
       url:this.kcUrl,
       realm:this.realm,

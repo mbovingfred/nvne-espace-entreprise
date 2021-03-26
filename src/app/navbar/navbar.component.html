@@ -24,8 +24,8 @@
         </div>
       </li>
       <!-- <a *ngIf="securityService.kc.authenticated" class="text-white" routerLink="/collaborateurs">Espace perso</a> -->
-      <a *ngIf="securityService.kc.authenticated && securityService.kc.realmAccess.roles.includes('user')"
-        routerLink="/profil" class="text-white navi-item">Mon espace</a>
+      <a *ngIf="securityService.kc.authenticated && securityService.kc.realmAccess.roles.includes('entreprise')"
+        routerLink="/" class="text-white navi-item">Mon espace</a>
       <a *ngIf="securityService.kc.authenticated && securityService.kc.realmAccess.roles.includes('user-manager')"
         href="{{adminUrl}}" class="text-white navi-item">Administration</a>
       <app-nvne-btn [type]="'button'" *ngIf="!securityService.kc.authenticated" (click)="onLogin()" [text]="'Se connecter'"></app-nvne-btn>

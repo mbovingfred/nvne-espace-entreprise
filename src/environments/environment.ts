@@ -13,7 +13,7 @@ export const environment = {
   production: false,
   authApiUrl: 'http://localhost:8080/auth',
   backendApiUrl: 'http://localhost:8082/api/espaceentreprise',
-  adminUrl: 'http://localhost:4200',
+  adminUrl: 'http://localhost:8081',
   homeUrl: 'http://localhost/#',
 };
 
